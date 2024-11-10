@@ -1,37 +1,37 @@
-body{
+body {
     background-color: black;
     color: white;
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-a:hover{
+
+a:hover {
     cursor: pointer;
 }
 
-.container{
+.container {
     margin: 20px 50px;
 }
 
-.input-container{
-   
+.input-container {
     display: grid;
-    grid-template-columns: repeat(3,auto);
-    gap:30px;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
     padding: 0;
-
 }
 
-.degree{
+.degree {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
 }
 
-.input-container input{
+.input-container input {
     background-color: black;
     border: 1px solid white;
     height: 40px;
@@ -40,49 +40,82 @@ a:hover{
     color: white;
 }
 
-.icons{
+/* New styles for date input */
+.input-container input[type="date"] {
+    background-color: black;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding-right: 10px;
+}
+
+/* Style the date picker calendar icon */
+.input-container input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Makes the calendar icon white */
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.input-container input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* Style the date input placeholder */
+.input-container input[type="date"]::-webkit-datetime-edit-text,
+.input-container input[type="date"]::-webkit-datetime-edit-month-field,
+.input-container input[type="date"]::-webkit-datetime-edit-day-field,
+.input-container input[type="date"]::-webkit-datetime-edit-year-field {
+    color: white;
+}
+
+.input-container input[type="date"]::-webkit-datetime-edit-text {
+    padding: 0 0.3em;
+}
+
+.icons {
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap:10px
+    gap: 10px;
 }
-.table{
+
+.table {
     border: 1px solid white;
-    width:100%;
+    width: 100%;
     border-spacing: 0;
     min-height: 200px;
     overflow-x: auto;
 }
 
-th,td{
+th, td {
     text-align: center;
 }
-th{
+
+th {
     border-bottom: 1px solid white;
     border-right: 1px solid white;
     padding: 10px;
 }
-td{
+
+td {
     padding: 10px;
     border-right: 1px solid white;
 }
-tbody{
+
+tbody {
     height: auto;
 }
 
-.search{
-    width:100%;
+.search {
+    width: 100%;
     background-color: black;
     border: 1px solid white;
     height: 40px;
     padding: 0;
     margin-bottom: 30px;
     margin-top: 20px;
-    width:100%;
     padding-left: 10px;
     color: white;
 }
-
 
 .button {
     height: 40px;
@@ -90,4 +123,37 @@ tbody{
     margin: 20px;
     margin-left: 0;
     margin-top: 30px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Make the table responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px 20px;
+    }
+
+    .input-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .button {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
