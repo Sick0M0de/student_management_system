@@ -1,2 +1,2 @@
-# codespaces_test
-trying out the codespaces feature for python use.
+# Student_management_System
+this is a project for college course made with Html,Css and Javascript only.
