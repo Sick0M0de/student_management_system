@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Management</h1>
+        <table class="table" id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceBody">
+                <!-- Rows will be dynamically populated -->
+            </tbody>
+        </table>
+        <button class="button" onclick="markAttendance()">Mark Attendance</button>
+    </div>
+    <script src="./attendance.js"></script>
+</body>
+</html>

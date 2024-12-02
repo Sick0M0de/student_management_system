@@ -157,3 +157,38 @@ tbody {
         white-space: nowrap;
     }
 }
+/* Navigation Bar Styles */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 10px 0;
+    margin-bottom: 20px; /* Adds spacing after the nav bar */
+    border-bottom: 1px solid white; /* Optional for a clean divider */
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Make the navigation bar responsive */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    .nav a {
+        margin: 5px 0; /* Add spacing between links */
+    }
+}
